@@ -4,13 +4,12 @@ import './product.css';
 class Product extends Component{
     render(){
         return(
-         <div className="card">
-            <img className="card-img-top" alt
-            ="Product"></img>
+         <div className="card product">
+            <img className="card-img-top" src={this.props.imgUrl} alt="Product" ></img>
             <div className="card-block">
-                <h4 className="card-title"></h4>
-                <p className="card-text">Price: Rp</p>
-                <a href="#" className="btn btn-primary">Add to wishlist </a>
+                <h4 className="card-title">{this.props.title}</h4>
+                <p className="card-text">Price: Rp{this.props.price}</p>
+                <a href="#" className="btn btn-primary">Add to Cart </a>
             </div>
         </div>
         );
